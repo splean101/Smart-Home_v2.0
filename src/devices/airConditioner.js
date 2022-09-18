@@ -1,4 +1,6 @@
-class AirConditioner {
+import { Device } from './Device.js';
+
+export class AirConditioner extends Device {
   constructor(model) {
     super(model);
     this._mode = 'cooling';

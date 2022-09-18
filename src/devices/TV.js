@@ -1,4 +1,6 @@
-class TV {
+import { Device } from './Device.js';
+
+export class TV extends Device {
   constructor(model) {
     super(model);
     this._chanels = [
