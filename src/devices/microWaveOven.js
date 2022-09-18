@@ -38,9 +38,6 @@ export class MicrowaveOven extends Device {
     this._interval = setInterval(() => {
       if (this._timerDelay >= 0) {
         this._timerDelay -= 1000;
-        this.timeLeft.innerText = `Time left ${
-          (this._timerDelay + 1000) / 1000
-        } s`;
         return;
       }
       clearInterval(this._interval);
