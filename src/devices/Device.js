@@ -3,17 +3,17 @@ export class Device {
     this._model = model;
     this._state = false;
   }
-  getModel(model) {
+  getModel() {
     // getting model
     //...
   }
-  setModel() {
+  setModel(model) {
     // setting model
     //.....
   }
   getState() {
     // getting state
-    return this._state ? 'ON' : 'OFF';
+    return this._state;
   }
   on() {
     this._state = true;

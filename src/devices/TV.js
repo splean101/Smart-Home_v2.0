@@ -49,21 +49,21 @@ export class TV extends Device {
       this._chanels[this._chanels.indexOf(currentChannel) - 1]);
   }
   increaseVolume() {
-    //increassng volume
+    //increasіng volume
     this._volume += 1;
   }
   decreaseVolume() {
-    //decrease volume
+    //decreasing volume
     this._volume -= 1;
   }
   smartTVmodeOn() {
-    //turn on smartTV mode
+    //turning on smartTV mode
     if (!this._smartTV) {
       this._smartTV = true;
     }
   }
   smartTVmodeOff() {
-    //turn off smartTV mode
+    //turning off smartTV mode
     if (this._smartTV) {
       this._smartTV = false;
     }
@@ -98,7 +98,7 @@ export class TV extends Device {
     }, 1000);
   }
   stopTimer() {
-    // turn timer off
+    // turning timer off
     clearInterval(this._interval);
   }
 }
