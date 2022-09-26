@@ -3,11 +3,11 @@ export class Device {
     this._model = model;
     this._state = false;
   }
-  getModel() {
+  get model() {
     // getting model
     return this._model;
   }
-  setModel(model) {
+  set model(model) {
     // setting model
     //.....
   }

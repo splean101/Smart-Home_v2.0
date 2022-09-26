@@ -7,15 +7,18 @@ export class AirConditioner extends Device {
     this._currentTemperature = 20;
     this._turboMode = false;
   }
-  setMode(mode) {
+  get mode(){
+    return this._mode;
+  }
+  set mode(mode) {
     // set mode 'cooling' or 'heating'
     this._mode = mode;
   }
-  getCurrentTemperature() {
+  get currentTemperature() {
     //getting current temperature
     return this._currentTemperature;
   }
-  setTemperature(temperature) {
+  set currentTemperature(temperature) {
     //setting temperature
     this._currentTemperature = temperature;
   }

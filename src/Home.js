@@ -1,3 +1,5 @@
+import { Validators } from './validator/validators.js';
+
 class Home {
   constructor(name = 'I`m', adress = 'The City of Lost Heaven') {
     this._owner = name; //prompt('Enter the name', '');
@@ -7,31 +9,12 @@ class Home {
     this._microwaveOwens = [];
   }
 
-  static stringValidation(data) {
-    if (data !== undefined && typeof data == 'string' && data !== null) {
-      return true;
-    }
-    return false;
-  }
-
-  static objectValidation(data) {
-    if (
-      data !== undefined &&
-      typeof data == 'object' &&
-      !Array.isArray(data) &&
-      data !== null
-    ) {
-      return true;
-    }
-    return false;
-  }
-
   get owner() {
     return this._owner;
   }
 
   set owner(owner) {
-    if (Home.stringValidation(data)) {
+    if (Validators.stringValidation(data)) {
       this._owner = owner;
     }
   }
@@ -45,19 +28,19 @@ class Home {
   }
 
   addAirConditioner(airConditioner) {
-    if (objectValidation(airConditioner)) {
+    if (Validators.objectValidation(airConditioner)) {
       this._airConditioners.push(airConditioner);
     }
   }
 
   addTV(tv) {
-    if (objectValidation(airConditioner)) {
+    if (Validators.objectValidation(airConditioner)) {
       this._tv.push(tv);
     }
   }
 
   addMO(microwaveOwen) {
-    if (objectValidation(airConditioner)) {
+    if (Validators.objectValidation(airConditioner)) {
       this._microwaveOwens.push(microwaveOwen);
     }
   }

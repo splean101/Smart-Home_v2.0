@@ -9,11 +9,11 @@ export class MicrowaveOven extends Device {
     this._interval = null;
     this._alarm = 'DING!';
   }
-  getPower() {
+  get power() {
     // getting power
     return this._power;
   }
-  setPower(power) {
+  set power(power) {
     // setting power
     this._power = power;
   }
