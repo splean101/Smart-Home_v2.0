@@ -5,7 +5,7 @@ export class Device {
   }
   getModel() {
     // getting model
-    //...
+    return this._model;
   }
   setModel(model) {
     // setting model
