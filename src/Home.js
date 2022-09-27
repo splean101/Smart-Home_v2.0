@@ -4,9 +4,11 @@ class Home {
   constructor(name = 'I`m', adress = 'The City of Lost Heaven') {
     this._owner = name; //prompt('Enter the name', '');
     this._adress = adress; //prompt('Enter the city', '');
-    this._airConditioners = [];
-    this._tv = [];
-    this._microwaveOwens = [];
+    this._devices = {
+      airConditioner: [],
+      tv: [],
+      microwaveOwen: [],
+    };
   }
 
   get owner() {
@@ -29,19 +31,19 @@ class Home {
 
   addAirConditioner(airConditioner) {
     if (Validators.objectValidation(airConditioner)) {
-      this._airConditioners.push(airConditioner);
+      this._devices.airConditioner.push(airConditioner);
     }
   }
 
   addTV(tv) {
-    if (Validators.objectValidation(airConditioner)) {
-      this._tv.push(tv);
+    if (Validators.objectValidation(tv)) {
+      this._devices.tv.push(tv);
     }
   }
 
   addMO(microwaveOwen) {
-    if (Validators.objectValidation(airConditioner)) {
-      this._microwaveOwens.push(microwaveOwen);
+    if (Validators.objectValidation(microwaveOwen)) {
+      this._devices.microwaveOwen.push(microwaveOwen);
     }
   }
 }

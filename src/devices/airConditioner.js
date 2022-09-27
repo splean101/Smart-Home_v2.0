@@ -7,7 +7,7 @@ export class AirConditioner extends Device {
     this._currentTemperature = 20;
     this._turboMode = false;
   }
-  get mode(){
+  get mode() {
     return this._mode;
   }
   set mode(mode) {

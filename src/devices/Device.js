@@ -1,3 +1,5 @@
+import { Validators } from '../validator/validators.js';
+
 export class Device {
   constructor(model) {
     this._model = model;
@@ -9,9 +11,11 @@ export class Device {
   }
   set model(model) {
     // setting model
-    //.....
+    if (Validators.stringValidation(model)) {
+      this._model = model;
+    }
   }
-  getState() {
+  get state() {
     // getting state
     return this._state;
   }

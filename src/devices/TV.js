@@ -18,7 +18,7 @@ export class TV extends Device {
     this._interval = null;
     this._timerDelay = 15000;
   }
-  getCurrentChanel() {
+  get currentChanel() {
     // getting currentChanel
     return this._currentChannel;
   }
