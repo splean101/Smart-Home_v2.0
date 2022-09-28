@@ -5,7 +5,8 @@ export function renderTV(model) {
   //const tv = new TV(model);
   //myHouse.addTV(tv);
   let tvDiv = document.createElement('div');
-  tvDiv.innerHTML = `<h3>TV</h3>`;
+  tvDiv.innerHTML = `<h3 class = "device">TV</h3>`;
 
-  root.insertAdjacentElement('beforeend', tvDiv);
+  const root = document.getElementById('devicesDiv');
+  root.appendChild(tvDiv);
 }

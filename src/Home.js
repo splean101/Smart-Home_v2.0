@@ -2,8 +2,8 @@ import { Validators } from './validator/validators.js';
 
 class Home {
   constructor(name = 'I`m', adress = 'The City of Lost Heaven') {
-    this._owner = name; //prompt('Enter the name', '');
-    this._adress = adress; //prompt('Enter the city', '');
+    this._owner = name; 
+    this._adress = adress; 
     this._devices = {
       airConditioner: [],
       tv: [],

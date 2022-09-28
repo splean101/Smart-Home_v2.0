@@ -2,8 +2,9 @@ import { myHouse } from '../Home.js';
 import { MicrowaveOven } from '../devices/MicroWaveOven.js';
 
 export function renderMicrowaveOven(model) {
-    let moDiv = document.createElement('div');
-    moDiv.innerHTML = `<h3>MicrowaveOven</h3>`;
+  let moDiv = document.createElement('div');
+  moDiv.innerHTML = `<h3 class = "device">Microwave Oven</h3>`;
 
-  root.insertAdjacentElement('beforeend', moDiv);
+  const root = document.getElementById('devicesDiv');
+  root.appendChild(moDiv);
 }

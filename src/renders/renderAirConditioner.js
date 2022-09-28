@@ -3,7 +3,8 @@ import { AirConditioner } from '../devices/airConditioner.js';
 
 export function renderAirConditioner(model) {
   let acDiv = document.createElement('div');
-  acDiv.innerHTML = `<h3>AirConditioner</h3>`;
+  acDiv.innerHTML = `<h3 class = "device">AirConditioner</h3>`;
 
-  root.insertAdjacentElement('beforeend', acDiv);
+  const root = document.getElementById('devicesDiv');
+  root.appendChild(acDiv);
 }

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <fieldset>
+        <legend>
+            <h2>Smart Home</h2>
+        </legend>
+        <Address>
+            <div>City: <b>...</b></div>
+            <div>Owner: <b>...</b></div>
+        </Address>
+        <form name="owner">
+            <input type="text">
+            <input type="button" value="Change Owner">
+        </form>
+        <form name="city">
+            <input type="text">
+            <input type="button" value="Change City">
+        </form>
+        <form name="addDevice">
+            <div>Choose device</div>
+            <div>
+                <input type="radio" id="microwaveOwen" name="device" checked>
+                <label for="microwaveOwen">Microwave Owen</label>
+            </div>
+            <div>
+                <input type="radio" id="airConditioner" name="device">
+                <label for="airConditioner">Air Conditioner</label>
+            </div>
+            <div>
+                <input type="radio" id="TV" name="device">
+                <label for="TV">TV</label>
+            </div>
+
+            <input type="button" value="+Add Device" name="addDeviceSubmit">
+        </form>
+    </fieldset>
+
+</body>
+
+</html>
