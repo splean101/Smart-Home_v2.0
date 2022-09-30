@@ -1,4 +1,22 @@
-.device {
-    border: 1px solid gray;
-    border-radius: 5px;
+body {
+  margin: 5%;
+  font-size: 1.2rem;
 }
+* {
+  font-family: 'Oswald', sans-serif;
+}
+.device,
+div.container,
+fieldset {
+  border: 1px solid gray;
+  border-radius: 5px;
+  margin: 2%;
+}
+
+.input[type="text"]{
+    width: 40vw;
+}
+.input[type="button"]{
+    width: 20vw;
+}
+

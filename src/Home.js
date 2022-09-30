@@ -16,7 +16,7 @@ class Home {
   }
 
   set owner(owner) {
-    if (Validators.stringValidation(data)) {
+    if (Validators.stringValidation(owner)) {
       this._owner = owner;
     }
   }
