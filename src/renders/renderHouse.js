@@ -1,7 +1,6 @@
 import { renderMicrowaveOven } from './renderMicrowaveOven.js';
 import { renderAirConditioner } from './renderAirConditioner.js';
 import { renderTV } from './renderTV.js';
-import { myHouse } from '../Home.js';
 
 export function renderHouse(home) {
   const fieldset = document.createElement('fieldset');

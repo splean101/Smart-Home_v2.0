@@ -3,9 +3,9 @@ import { Device } from './Device.js';
 export class MicrowaveOven extends Device {
   constructor(model) {
     super(model);
-    this._power = '0';
+    this._power = 0;
     this._doorState = false;
-    this._timerDelay = 10000;
+    this._timerDelay = 5000;
     this._interval = null;
     this._alarm = 'DING!';
   }
@@ -17,6 +17,7 @@ export class MicrowaveOven extends Device {
     // setting power
     this._power = power;
   }
+  
   openDoor() {
     //opening door
     return (this._doorState = true);
