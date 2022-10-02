@@ -41,7 +41,7 @@ class Home {
     }
   }
 
-  addMO(microwaveOwen) {
+  addMicrowaveOwen(microwaveOwen) {
     if (Validators.objectValidation(microwaveOwen)) {
       this._devices.microwaveOwen.push(microwaveOwen);
     }

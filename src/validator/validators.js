@@ -6,7 +6,7 @@ export class Validators {
     return false;
   }
 
-  static numberValidation(data) {
+  static numberValidation(number) {
     if (isFinite(number) && typeof number == 'number' && !isNaN(number)) {
       return true;
     }
