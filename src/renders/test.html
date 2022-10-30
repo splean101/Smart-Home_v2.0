@@ -10,30 +10,34 @@
 
 <body>
     <div>
-        <h3 class="device">This is ${microwaveOwen.model} microwave owen</h3>
-        <button id = "ONmicroWaveOwenButton">ON</button>
-        <button id = "OFFmicroWaveOwenButton">OFF</button>
-        <span id="closeMessage" style="visibility:hidden; color:red"><u><b>Clouse the door, please!</b> </u></span>
-        <button id="openDoor">Open</button>
-        <button id="closeDoor">Close</button>
+        <h3 class="device">This is ${AirConditioner.model} air conditioner</h3>
         <div>
-            <div>Power: <span id="powerValue">0</span></div>
-            <span>0</span>
-            <input type="range" name="microwaveOwenPower" min="0" max="800" step="50" value="0" />
-            <span>800</span>
+            <button id="ONairConditionerButton${id}">ON</button>
+            <button id="OFFairConditionerButton${id}">OFF</button>
         </div>
-        <div>
-            <div>Timer: <span id = "timerValue">0</span></div>
-            <span>0</span>
-            <input type="range" name="timeDelay" min="0" max="5" step="0.5" value="0" />
-            <span>5 min.</span>
-            <button id="stopTimer">Reject</button>
-            <div><button id="delButton">DELETE</button></div>
-        </div>
+        <div id="innerConditioner" style="visibility: hidden;">
+            <div>Mode:
+                <button id="coolingAirConditionerButton${id}">Cooling</button>
+                <button id="heatingAirConditionerButton${id}">Heating</button>
+                <button id="TURBOairConditionerButton${id}">TURBO</button>
+            </div>
+            <div><span>min</span>
+                <input type="range" id="changeTemp${id}" min="16" max="28" step="1"
+                    value=${airConditioner.currentTemperature} />
+                <span>max</span>
+                <div>
+                </div>
+                <div>
+                    <span>Mode </span>
+                    <span id="mode${id}">${airConditioner.mode}</span>
+                </div>
+                <div>
+                    <span id="temperature${id}">Temp. ${airConditioner.currentTemperature}&#176C</span>
+                    <span id="turbo${id}" style="visibility:hidden; color:red">TURBO</span>
+                </div>
+                <div><button id="delAirConditionerButton${id}">DELETE</button></div>
+            </div>
 
-
-
-    </div>
 
 
 </body>

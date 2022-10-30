@@ -1,6 +1,8 @@
 import { myHouse } from '../Home.js';
 import { MicrowaveOven } from '../devices/MicroWaveOven.js';
+
 let id = 0;
+
 export function renderMicrowaveOven(model) {
   id++;
 
@@ -27,8 +29,8 @@ export function renderMicrowaveOven(model) {
       <input type="range" id="timeDelay${id}" min="0" max="10" step="1" value="0" />
       <span>10 sec.</span>
       <button id="stopTimer${id}">Reject</button>
-      <div><button id="delButton${id}">DELETE</button></div>`;
-  const root = document.getElementById('devicesDiv');  
+      <div><button id="delMicroWaveOwenButton${id}">DELETE</button></div>`;
+  const root = document.getElementById('devicesDiv');
   root.appendChild(microWaveOwenDiv);
 
   const ONmicroWaveOwenButton = document.getElementById(
@@ -45,7 +47,7 @@ export function renderMicrowaveOven(model) {
   const timerValue = document.getElementById(`timerValue${id}`);
   const timeDelay = document.getElementById(`timeDelay${id}`);
   const stopTimerButton = document.getElementById(`stopTimer${id}`);
-  const delButton = document.getElementById(`delButton${id}`);
+  const delButton = document.getElementById(`delMicroWaveOwenButton${id}`);
 
   ONmicroWaveOwenButton.addEventListener('click', () => {
     microWaveOwen.on();
@@ -102,7 +104,7 @@ export function renderMicrowaveOven(model) {
       }
       clearInterval(microWaveOwen.interval);
       timeDelay.value = 0;
-            alert('DING!')
+      alert('DING!');
     }, 1000);
   });
 

@@ -51,18 +51,7 @@ export class MicrowaveOven extends Device {
     // closing door
     return (this._doorState = false);
   }
-  // turnOnTimer() {
-  //   // turning timer on
-  //   this._interval = setInterval(() => {
-  //     if (this._timerDelay >= 0) {
-  //       this._timerDelay -= 500;
-  //       return;
-  //     }
-  //     clearInterval(this._interval);
-  //     alert(this._alarm);
-  //     return;
-  //   }, 500);
-  // }
+
   stopTimer() {
     // turning timer off
     clearInterval(this._interval);
