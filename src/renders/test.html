@@ -9,34 +9,56 @@
 </head>
 
 <body>
-    
-        <h3 class="device">This is ${AirConditioner.model} air conditioner</h3>
+
+    <h3 class="device">This is ${tv.model} TV</h3>
+    <div>
+        <button id="ONtv${id}">ON</button>
+        <button id="OFFtv${id}">OFF</button>
+    </div>
+    <div id="innerTV${id}">
+        <!--style="visibility: hidden;"-->
         <div>
-            <button id="ONairConditionerButton${id}">ON</button>
-            <button id="OFFairConditionerButton${id}">OFF</button>
+            <img src="./tvChanelsImages/0.jpg" alt="screen" width="480px" height="320px">
         </div>
-        <div id="innerConditioner${id}" style="visibility: hidden;">
-            <div>Mode:
-                <button id="coolingAirConditionerButton${id}">Cooling</button>
-                <button id="heatingAirConditionerButton${id}">Heating</button>
-                <button id="TURBOairConditionerButton${id}">TURBO</button>
+        <div>Chanel:
+            <span id="CurrentChanel">${tv.currentChanel}</span>
+        </div>
+        <div>Volume:
+            <button>-</button>
+            <span>${tv.volume}</span>
+            <button>+</button>
+        </div>
+        <div>
+            <button>MUTE</button>
+        </div>
+        <div>Chanel list:
+            <div>
+                <input type="radio" id="chanel1" name="chanel" checked>
+                <label for="chanel1">MTV</label>
             </div>
-            <div><span>min</span>
-                <input type="range" id="changeTemp${id}" min="16" max="28" step="1"
-                    value=${airConditioner.currentTemperature} />
-                <span>max</span>
-                <div>
-                    <span>Mode </span>
-                    <span id="mode${id}">${airConditioner.mode}</span>
-                </div>
-                <div>
-                    <span>Temp. <span id="temperature${id}">${airConditioner.currentTemperature}</span>&#176C</span>
-                    <span id="turbo${id}" style="visibility:hidden; color:red">TURBO</span>
-                </div>
-                
+            <div>
+                <input type="radio" id="chanel2" name="chanel">
+                <label for="chanel2">Discovery</label>
+            </div>
+            <div>
+                <input type="radio" id="chanel3" name="chanel">
+                <label for="chanel3">Breaking News</label>
             </div>
         </div>
-        <div><button id="delAirConditionerButton${id}">DELETE</button></div>
+        <div>
+            <fieldset>
+                <form name="addChanel">
+                    <input type="text" name = "addChanelInput" class = "input">
+                    <input type="button" name = "addChanelButton" value="Add the Chanel" class = "input">
+                  </form>
+                  <form name="deleteChanel">
+                    <input type="text" name = "deleteChanelInput" class = "input">
+                    <input type="button" name = "deleteChanelButton" value="Delete the Chanel" class = "input">
+                  </form>
+            </fieldset>
+        </div>
+    </div>
+    <div><button id="delTV${id}">DELETE</button></div>
 
 
 

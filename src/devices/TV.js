@@ -48,6 +48,9 @@ export class TV extends Device {
     return (this._currentChanel =
       this._chanels[this._chanels.indexOf(currentChannel) - 1]);
   }
+  get volume() {
+    return this._volume;
+  }
   increaseVolume() {
     //increasіng volume
     this._volume += 1;
@@ -102,5 +105,3 @@ export class TV extends Device {
     clearInterval(this._interval);
   }
 }
-
-
