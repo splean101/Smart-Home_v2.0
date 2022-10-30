@@ -13,7 +13,7 @@ export function renderMicrowaveOven(model) {
   microWaveOwenDiv.classList.add('container');
   microWaveOwenDiv.innerHTML = `<h3 class="device">This is ${microWaveOwen.model} microwave owen</h3>
   <button id = "ONmicroWaveOwenButton${id}">ON</button>
-  <button id = "OFFmicroWaveOwenButton${id}">OFF</button>
+  <button id = "OFFmicroWaveOwenButton${id}" class="pushed">OFF</button>
   <span id="closeMessage${id}" style="visibility:hidden; color:red"><u><b>Clouse the door, please!</b> </u></span>
   <button id="openDoor${id}">Open</button>
   <button id="closeDoor${id}">Close</button>
@@ -21,7 +21,7 @@ export function renderMicrowaveOven(model) {
       <div>Power: <span id="powerValue${id}">${microWaveOwen.power}</span></div>
       <span>0</span>
       <input type="range" id="microWaveOwenPower${id}" min="0" max="800" step="50" value="0" orient="vertical"/>
-      <span>800</span>
+      <span>800W</span>
   </div>
   <div>
       <div>Timer: <span id="timerValue${id}">${microWaveOwen.timerDelay} sec.</span></div>

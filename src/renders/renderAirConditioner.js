@@ -14,7 +14,7 @@ export function renderAirConditioner(model) {
   airConditionerDiv.innerHTML = `<h3 class="device">This is ${AirConditioner.model} air conditioner</h3>
   <div>
       <button id="ONairConditionerButton${id}">ON</button>
-      <button id="OFFairConditionerButton${id}">OFF</button>
+      <button id="OFFairConditionerButton${id}" class="pushed">OFF</button>
   </div>
   <div id="innerConditioner${id}" style="visibility: hidden;">
       <div>Mode:
@@ -27,17 +27,17 @@ export function renderAirConditioner(model) {
               value=${airConditioner.currentTemperature} />
           <span>max</span>
           <div>
-          </div>
-          <div>
               <span>Mode </span>
               <span id="mode${id}">${airConditioner.mode}</span>
           </div>
           <div>
-              <span id="temperature${id}">Temp. ${airConditioner.currentTemperature}&#176C</span>
+              <span>Temp. <span id="temperature${id}">${airConditioner.currentTemperature}</span>&#176C</span>
               <span id="turbo${id}" style="visibility:hidden; color:red">TURBO</span>
           </div>
-          <div><button id="delAirConditionerButton${id}">DELETE</button></div>
-      </div>`;
+          
+      </div>
+  </div>
+  <div><button id="delAirConditionerButton${id}">DELETE</button></div>`;
 
   const root = document.getElementById('devicesDiv');
   root.appendChild(airConditionerDiv);
@@ -69,6 +69,7 @@ export function renderAirConditioner(model) {
     ONairConditionerButton.className = 'pushed';
     OFFairConditionerButton.className = '';
     innerConditioner.style.visibility = 'visible';
+    coolingAirConditionerButton.className = 'pushed';
   });
 
   OFFairConditionerButton.addEventListener('click', () => {
@@ -112,4 +113,13 @@ export function renderAirConditioner(model) {
       turbo.style.visibility = 'hidden';
     }
   });
+
+  temperatureChanger.addEventListener('click', () => {
+    airConditioner.currentTemperature = temperatureChanger.value;
+    temperatureValue.innerText = airConditioner.currentTemperature;
+  });
+
+  deleteButton.addEventListener('click', () =>
+    root.removeChild(airConditionerDiv)
+  );
 }
