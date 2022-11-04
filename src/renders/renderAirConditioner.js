@@ -11,7 +11,7 @@ export function renderAirConditioner(model) {
 
   let airConditionerDiv = document.createElement('div');
   airConditionerDiv.classList.add('container');
-  airConditionerDiv.innerHTML = `<h3 class="device">This is ${AirConditioner.model} air conditioner</h3>
+  airConditionerDiv.innerHTML = `<h3 class="device">This is ${airConditioner.model} air conditioner</h3>
   <div>
       <button id="ONairConditionerButton${id}">ON</button>
       <button id="OFFairConditionerButton${id}" class="pushed">OFF</button>
