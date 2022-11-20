@@ -20,7 +20,7 @@ export class TV extends Device {
   }
   get currentChanel() {
     // getting currentChanel
-    return this._currentChannel;
+    return this._currentChanel;
   }
   addChannel(newChannel) {
     //pushing new chanel to array
@@ -51,13 +51,20 @@ export class TV extends Device {
   get volume() {
     return this._volume;
   }
+  mute() {
+    this._volume = 0;
+  }
   increaseVolume() {
     //increasіng volume
-    this._volume += 1;
+    if (this._volume < 100) {
+      this._volume += 1;
+    }
   }
   decreaseVolume() {
     //decreasing volume
-    this._volume -= 1;
+    if (this._volume >= 1) {
+      this._volume -= 1;
+    }
   }
   smartTVmodeOn() {
     //turning on smartTV mode
