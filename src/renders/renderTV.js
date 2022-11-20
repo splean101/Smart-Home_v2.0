@@ -113,8 +113,46 @@ export function renderTV(model) {
     tv.increaseVolume();
     volumeValue.innerText = tv.volume;
   });
-  muteVolumeButton.addEventListener('click', ()=>{
+  muteVolumeButton.addEventListener('click', () => {
     tv.mute();
     volumeValue.innerText = tv.volume;
-  })
+  });
+  const changeChanel = (e) => {
+    switch (e.target.id) {
+      case `chanel1${id}`:
+        chanelImg.src = './src/renders/tvChanelsImages/MTV.jpg';
+        tv.currentChanel = tv.chanelList[0];
+        break;
+      case `chanel2${id}`:
+        chanelImg.src = './src/renders/tvChanelsImages/discovery.webp';
+        tv.currentChanel = tv.chanelList[1];
+        break;
+      case `chanel3${id}`:
+        chanelImg.src = './src/renders/tvChanelsImages/breaking-news.webp';
+        tv.currentChanel = tv.chanelList[2];
+        break;
+      case `chanel4${id}`:
+        chanelImg.src = './src/renders/tvChanelsImages/NG.png';
+        tv.currentChanel = tv.chanelList[3];
+        break;
+      case `chanel5${id}`:
+        chanelImg.src = './src/renders/tvChanelsImages/cartoon.jpg';
+        tv.currentChanel = tv.chanelList[4];
+        break;
+      case `chanel6${id}`:
+        chanelImg.src =
+          './src/renders/tvChanelsImages/Flag_of_Amsterdam.svg.png';
+        tv.currentChanel = tv.chanelList[5];
+        break;
+      case `chanel7${id}`:
+        chanelImg.src = './src/renders/tvChanelsImages/fashion.jpg';
+        tv.currentChanel = tv.chanelList[6];
+        break;
+    }
+    currentChanel.innerText = tv.currentChanel;
+  };
+  const [...chanels] = document.querySelectorAll('input[name="chanel"]');
+  for (let chanel of chanels) {
+    chanel.addEventListener('click', changeChanel);
+  }
 }

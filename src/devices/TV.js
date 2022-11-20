@@ -18,9 +18,16 @@ export class TV extends Device {
     this._interval = null;
     this._timerDelay = 15000;
   }
+  get chanelList (){
+    return this._chanels;
+  }
   get currentChanel() {
     // getting currentChanel
     return this._currentChanel;
+  }
+  set currentChanel(chanel) {
+    // setting currentChanel
+    this._currentChanel = chanel;
   }
   addChannel(newChannel) {
     //pushing new chanel to array
